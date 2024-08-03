@@ -6,25 +6,23 @@ const userSchema = new Schema ({
     _id: mongoose.Schema.Types.ObjectId,
 
     firstName: {
-        type: String,
-        trim: true,
-      },
-      
-      lastName: {
-        type: String,
-        trim: true,
-      },
+      type: String,
+    },
 
-      comments: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: 'Comment'
-        },
-      ]
-    }
-),
+    lastName: {
+      type: String,
+    },
 
-module.exports = model('User', userSchema):
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
+      },
+    ]
+  }
+)
+
+module.exports = model('User', userSchema)
 
      
 
