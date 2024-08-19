@@ -22,7 +22,8 @@ describe('USER CREATE',() => {
                 if(err) return done (err);
                 respData = res.body.data;
                 console.log(respData);
-          //      expect (respData).eq()
+               expect (respData.userCreate.firstName).eq(user.userInput.firstName);
+               console.log ('ответ',respData.userCreate.firstName, '----------ожидание =',user.userInput.firstName);
           done();
                     
             })
